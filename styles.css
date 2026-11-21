@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* nav ul li a {
+  color: white;
+  text-decoration: none;
+} */
+
+aside.sidebar {
+  position: fixed;
+  top: 40px;
+  /* top: 0; */
+  right: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 200px;
+  /* float: left; */
+}
+
+main.container {
+  padding: 20px;
+  position: relative;
+}
+
+footer {
+  background-color: #8e44ad;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  clear: both;
+}
+
+/* Lesson: Box Model */
+.content {
+  width: 200px;
+  height: 200px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #b385c7;
+  border: 5px solid rgb(11, 11, 172);
+  margin: 20px 10px 15px 12px;
+}
+
+/* Lession: Responsive Design */
+.responsive-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  padding: 20px;
+  /* width: 100%; */
+  background-color: #b385c7;
+}
+
+.responsive-row .children {
+  height: 300px;
+  border: 2px solid #043109;
+  text-align: center;
+  padding: 20px;
+  /* width: 40px; */
+}
+
+@media (width < 1340px) {
+  .responsive-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (width < 992px) {
+  .responsive-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width < 600px) {
+  .responsive-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width < 502px) {
+  .responsive-row {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
